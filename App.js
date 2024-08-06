@@ -1,11 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button, Alert } from 'react-native';
+
+
+function TextButton(props) {
+  return <Text style={{color: "white"}}>{props.title}</Text>;
+}
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Olá meninas, tudo bem?? Boa tarde</Text>
-      <StatusBar style="auto" />
+      <Button
+        title="botao"
+        onPress={()=>Alert.alert('sei la')}
+        />
+
+      <Text style={{ color: "white", fontSize: 100 }}>AquapH</Text>
+      <StatusBar style="dark" />
+    
     </View>
   );
 }
@@ -13,8 +24,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  
 });
